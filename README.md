@@ -1,5 +1,5 @@
 ### Image-Segmentation-using-UNets ###
-* Image Segmentation is classifying every pixel of input image to one of several classes which we assign initially, also our final image will be of similar dimensions of input.so we can't use normal architectures we use for classification task beacause it downsamples our images into vector,we also need a upsampling path in our case.
+* Image Segmentation is classifying every pixel of input image to one of several classes which we assign initially, also our final image will be of similar dimensions of input.so we can't use normal architectures we use for classification task beacause it downsamples our images into vector,we also need a upsampling path to restore the image to its original dimensions.
 * While converting an image into a vector, we already learned the feature mapping of the image so why not use the same mapping to convert it again to image.This is the recipe behind UNet. Use the same feature maps that are used for contraction(downsampling) to expand a vector to a segmented image. This would preserve the structural integrity of the image which would reduce distortion enormously. 
 Let’s understand the architecture more briefly.
 ## Architecture ##
@@ -13,7 +13,7 @@ Let’s understand the architecture more briefly.
 * We are classifying each pixel into one of the classes. The idea is that even in segmentation every pixel have to lie in some category and we just need to make sure that they do. So we just converted a segmentation problem into a multiclass classification problem,you can also write your own variant of loss function but the basic principle (every pixel belongs to one of many categories) remains same.
 * Loss function I used in my problem
 
-        def accuracy(imput,taret):
+        def accuracy(input,taret):
          target = target.squeeze(1)
          mask = (target != void_code)
          return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
