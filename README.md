@@ -11,7 +11,7 @@ Let’s understand the architecture more briefly.
 
 **Loss function:**
 * We are classifying each pixel into one of the classes. The idea is that even in segmentation every pixel have to lie in some category and we just need to make sure that they do. So we just converted a segmentation problem into a multiclass classification problem,you can also write your own variant of loss function but the basic principle (every pixel belongs to one of many categories) remains same.
-* Loss function I used in my problem,
+* Loss function I used in my problem
 
         def accuracy(imput,taret):
          target = target.squeeze(1)
@@ -23,7 +23,7 @@ Let’s understand the architecture more briefly.
 * Im using a variant of CamVid dataset
 * Original: http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/
 * Variant:  https://github.com/alexgkendall/SegNet-Tutorial.git 
-* Full Dataset has 32 classes however to reuce complexity im using the important ones,which are 
+* Full Dataset has 32 classes however to reuce complexity im using the important ones which are 
 * codes = array(['Sky', 'Building', 'Pole', 'Road', 'Sidewalk', 'Tree',
     'Sign', 'Fence', 'Car', 'Pedestrian', 'Cyclist', 'Void'])
  Labelled Input batch:
@@ -34,7 +34,7 @@ Let’s understand the architecture more briefly.
 * <img width="397" alt="table2" src="https://user-images.githubusercontent.com/47039231/75104650-b8adb700-5631-11ea-86f4-a57dbdc2eb88.PNG">
 <img width="506" alt="Capture" src="https://user-images.githubusercontent.com/47039231/75104821-77b6a200-5633-11ea-9041-173b8309ffce.PNG">
 
-* Do Checkout My Colab Notebook for the Complete Implemntation
+* Do Checkout My Colab Notebook for the Complete Implemntation.
 
 ### Acknowldgements
 * Used GPU offered by Google Colabaroty
