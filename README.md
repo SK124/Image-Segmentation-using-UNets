@@ -11,18 +11,12 @@ Let’s understand the architecture more briefly.
 
 **Loss function:**
 * We are classifying each pixel into one of the classes. The idea is that even in segmentation every pixel have to lie in some category and we just need to make sure that they do. So we just converted a segmentation problem into a multiclass classification one and it performed very well as compared to the traditional loss functions.
-loss function i used in my problem:
+* Loss function i used in my problem:
 
-* def accuracy(input, target):
-
- 
-        target = target.squeeze(1)
-    
-    
-        mask = (target != void_code)
-    
-    
-        return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
+        def accuracy(imput,taret):
+         target = target.squeeze(1)
+         mask = (target != void_code)
+         return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
 
 
 **Dataset**
@@ -31,4 +25,6 @@ loss function i used in my problem:
 * codes = array(['Sky', 'Building', 'Pole', 'Road', 'Sidewalk', 'Tree',
     'Sign', 'Fence', 'Car', 'Pedestrian', 'Cyclist', 'Void'])
 
+**Results**
+* 
   
