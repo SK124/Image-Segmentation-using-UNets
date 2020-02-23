@@ -38,7 +38,7 @@ Let’s understand the architecture more briefly.
 
 ### Acknowldgements
 * Used GPU offered by Google Colabaroty
-* Do check out fast.ai course Lesson 7 (https://course.fast.ai/videos?lesson=7) ,also others if you are interested :)
+* Do check out fast.ai course Lesson 7 (https://course.fast.ai/videos?lesson=7) 
 * Library Used: fast.ai v2
 * Paper  https://arxiv.org/pdf/1505.04597.pdf
 * Additional Info. https://www.jeremyjordan.me/semantic-segmentation/
