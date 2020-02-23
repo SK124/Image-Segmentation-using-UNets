@@ -1,5 +1,5 @@
 ### Pixel Classifier
-### Image-Segmentation-using-UNets ###
+### Image Segmentation using UNets ###
 * Image Segmentation is classifying every pixel of input image to one of several classes which we assign initially, also our final image will be of similar dimensions of input.so we can't use normal architectures we use for classification task beacause it downsamples our images into vector,we also need a upsampling path to restore the image to its original dimensions.
 * While converting an image into a vector, we already learned the feature mapping of the image so why not use the same mapping to convert it again to image.This is the recipe behind UNet. Use the same feature maps that are used for contraction(downsampling) to expand a vector to a segmented image. This would preserve the structural integrity of the image which would reduce distortion enormously. 
 Let’s understand the architecture more briefly.
