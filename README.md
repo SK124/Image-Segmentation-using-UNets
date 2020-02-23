@@ -34,7 +34,7 @@ Let’s understand the architecture more briefly.
 * <img width="397" alt="table2" src="https://user-images.githubusercontent.com/47039231/75104650-b8adb700-5631-11ea-86f4-a57dbdc2eb88.PNG">
 <img width="506" alt="Capture" src="https://user-images.githubusercontent.com/47039231/75104821-77b6a200-5633-11ea-9041-173b8309ffce.PNG">
 
-* Do Checkout My Colab Notebook for the Complete Implemntation.
+* Do Checkout My Colab Notebook for the Complete Implemntation. https://colab.research.google.com/drive/17txWDxQ0y18v8oFErQfsqPypkaLotVJt#scrollTo=ovR51dNcKBMg
 
 ### Acknowldgements
 * Used GPU offered by Google Colabaroty
