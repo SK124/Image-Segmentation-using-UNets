@@ -1,5 +1,5 @@
 ### Image-Segmentation-using-UNets ###
-* Image segmentation is classfig every pixel of input image to of several classes which means our final image will be of similar dimensioin of input,so we can't use normal architectures we use for classifiction task beacause it downsamples our images into vector. we also need a upsampling path in our case.
+* Image segmentation is classifying every pixel of input image to of several classes which means our final image will be of similar dimensioin of input,so we can't use normal architectures we use for classifiction task beacause it downsamples our images into vector. we also need a upsampling path in our case.
 * While converting an image into a vector, we already learned the feature mapping of the image so why not use the same mapping to convert it again to image.This is the recipe behind UNet. Use the same feature maps that are used for contraction(downsampling) to expand a vector to a segmented image. This would preserve the structural integrity of the image which would reduce distortion enormously. 
 Let’s understand the architecture more briefly.
 ## Architecture ##
@@ -20,14 +20,30 @@ Let’s understand the architecture more briefly.
 
 
 **Dataset**
-* Im using CamVid dataset http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/
+* Im using a variant of CamVid dataset
+* Original: http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/
+* Variant:  https://github.com/alexgkendall/SegNet-Tutorial.git 
 * Full Dataset has 32 classes however to reuce complexity im using the important ones,which are 
 * codes = array(['Sky', 'Building', 'Pole', 'Road', 'Sidewalk', 'Tree',
     'Sign', 'Fence', 'Car', 'Pedestrian', 'Cyclist', 'Void'])
+ Labelled Input batch:
+ * <img width="606" alt="batc" src="https://user-images.githubusercontent.com/47039231/75104816-5ce42d80-5633-11ea-9f25-113d4d336481.PNG">
+ 
 
 **Results**  
 * <img width="397" alt="table2" src="https://user-images.githubusercontent.com/47039231/75104650-b8adb700-5631-11ea-86f4-a57dbdc2eb88.PNG">
-<img width="606" alt="batc" src="https://user-images.githubusercontent.com/47039231/75104731-936d7880-5632-11ea-879a-85359909d3ed.PNG">
+<img width="506" alt="Capture" src="https://user-images.githubusercontent.com/47039231/75104821-77b6a200-5633-11ea-9041-173b8309ffce.PNG">
+
+* Do Checkout My Colab Notebook for the Complete Implemntation
+
+### Acknowldgements
+* Used GPU offered by Google Colabaroty
+* Do check out fast.ai course Lesson 7 (https://course.fast.ai/videos?lesson=7),also others if you are interested :)
+* Library Used: fast.ai v2
+* Paper  https://arxiv.org/pdf/1505.04597.pdf
+* Additional Info. https://www.jeremyjordan.me/semantic-segmentation/
+
+
 
 
 
