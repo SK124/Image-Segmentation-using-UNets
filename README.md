@@ -14,9 +14,15 @@ Let’s understand the architecture more briefly.
 loss function i used in my problem:
 
 * def accuracy(input, target):
-    target = target.squeeze(1)
-    mask = (target != void_code)
-    return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
+
+ 
+        target = target.squeeze(1)
+    
+    
+        mask = (target != void_code)
+    
+    
+        return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
 
 
 **Dataset**
