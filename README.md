@@ -1,6 +1,6 @@
 ### Pixel Classifier
 ### Image Segmentation using UNets ###
-* Image Segmentation is classifying every pixel of input image to one of several classes which we assign initially, also our final image will be of similar dimensions of input.so we can't use normal architectures we use for classification task beacause it downsamples our images into vector,we also need a upsampling path to restore the image to its original dimensions.
+* Image Segmentation is classifying every pixel of input image to one of several classes which we assign initially,which means our model will ouyput the same imaage but with every pixel classified into one of many categories like 'Air','Pedestrian'depending on how you pass them to your model also our final image will be of similar dimensions of input.so we can't use normal architectures we use for classification task beacause it downsamples our images into vector we need a upsampling path to restore the image to its original dimensions.How do we do this?
 * While converting an image into a vector, we already learned the feature mapping of the image so why not use the same mapping to convert it again to image.This is the recipe behind UNet. Use the same feature maps that are used for contraction(downsampling) to expand a vector to a segmented image. This would preserve the structural integrity of the image which would reduce distortion enormously. 
 Let’s understand the architecture more briefly.
 ## Architecture ##
@@ -24,7 +24,7 @@ Let’s understand the architecture more briefly.
 * Im using a variant of CamVid dataset
 * Original: http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/
 * Variant:  https://github.com/alexgkendall/SegNet-Tutorial.git 
-* Full Dataset has 32 classes however to reuce complexity im using the important ones which are 
+* Full Dataset has 32 classes however to reduce complexity im using the important ones which are 
 * codes = array(['Sky', 'Building', 'Pole', 'Road', 'Sidewalk', 'Tree',
     'Sign', 'Fence', 'Car', 'Pedestrian', 'Cyclist', 'Void'])
 * Labelled Input batch:
