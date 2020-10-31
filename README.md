@@ -14,7 +14,7 @@ Let’s understand the architecture more briefly.
 * We are classifying each pixel into one of the classes. The idea is that even in segmentation every pixel have to lie in some category and we just need to make sure that they do. So we just converted a segmentation problem into a multiclass classification problem,you can also write your own variant of loss function but the basic principle (every pixel belongs to one of many categories) remains same.
 * Loss function I used in my problem
 
-        def accuracy(input,taret):
+        def accuracy(input,target):
          target = target.squeeze(1)
          mask = (target != void_code)
          return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
